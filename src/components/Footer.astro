@@ -1,0 +1,31 @@
+---
+import ContactSection from './ContactSection.astro';
+---
+<footer>
+    <div class="line"></div>
+    <ContactSection />
+    <div class="sub-footer">
+        <p>&copy; SafeBuild</p>
+    </div>
+</footer>
+<style>
+    footer {
+        
+    }
+    .sub-footer {
+        background-color: #1f2937;
+        color: white;
+        height: 58px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .sub-footer p {
+        margin-left: 4rem;
+        font-size: 14px;
+    }
+    .line {
+        background-color: #f3f8fe;
+        height: 50px;
+    }
+</style>

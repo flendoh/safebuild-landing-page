@@ -1,0 +1,52 @@
+---
+import Button from './Button.astro';
+---
+<header>
+    <picture>
+        <img src="/logo.png" alt="SafeBuild" width="150" height="150" />
+    </picture>
+    <nav>
+        <ul class="options">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/">Nosotros</a>
+            </li>
+            <li>
+                <a href="/">Servicios</a>
+            </li>
+            <li>
+                <a href="/">Contacto</a>
+            </li>
+            <li>
+                <Button text="Iniciar sesión" href="/iniciar-sesion" />
+            </li>
+        </ul>
+    </nav>
+</header>
+<style>
+    header {
+        background-color: #fafafa;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        overflow: hidden;
+    }
+    .options {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        list-style: none;
+    }
+    .options a {
+        text-decoration: none;
+        color: #1a73e8;
+        transition: color 0.3s ease;
+    }
+    .options a:hover {
+        color: #1658ae;
+    }
+</style>
