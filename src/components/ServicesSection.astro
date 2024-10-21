@@ -1,9 +1,39 @@
-<section class="services-section"></section>
-    <p>PARTE SERVICES SECTION</p>
+---
+import Card from './Card.astro';
+---
+<section class="services-section">
+    <div class="text-container">
+        <h1>Nuestros Servicios</h1>
+        <p>Soluciones a tu medida</p>
+    </div>
+    <div class="cards-container">
+        <Card title="Monitoreo en Tiempo Real" description="Supervisa la salud de los trabajadores en tiempo real para prevenir accidentes." image="/IconMonitoreo.svg" />
+        <Card title="Alertas Personalizables" description="Configura alertas según las condiciones específicas de cada proyecto." image="/IconAlerta.svg" />
+        <Card title="Capacitación en Seguridad" description="Accede a recursos de capacitación para mejorar la seguridad en el sitio de trabajo." image="/IconCapacitacion.svg" />
+    </div>
 </section>
 <style>
     .services-section {
         background-color: #e7eff6;
         height: 770px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .text-container{
+        margin-bottom: 5rem;
+    }
+    h1{
+        font-size: 49px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .cards-container{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
     }
 </style>
