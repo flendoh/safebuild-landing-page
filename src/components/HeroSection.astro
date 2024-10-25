@@ -2,30 +2,37 @@
 import Button from './Button.astro';
 ---
 
-<section class="hero-section">
+<section id="inicio">
     <h1>Monitoreo en Tiempo Real para la Seguridad Laboral</h1>
     <p>Protege a tus trabajadores con SafeBuild</p>
-    <Button text="Comenzar Ahora" href="/iniciar-sesion" />
+    <Button text="Comenzar Ahora" href="#contacto" />
 </section>
 <style>
-    .hero-section {
+    #inicio {
         background-color: #fff;
-        height: 601px;
+        min-height: 601px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         gap: 1rem;
+        padding: 1rem;
     }
     h1{
-        width: 923px;
-        height: 130px;
+        max-width: 923px;
+        max-height: 130px;
         text-align: center;
     }
     p{
-        font-size: 30px;
-        height: 30px;
+        font-size: clamp(20px, 2vw, 30px);
+        max-height: 30px;
         margin-bottom: 3rem;
+    }
+    @media (max-width: 768px) {
+        p{
+            max-width: 300px;
+        }
     }
 </style>

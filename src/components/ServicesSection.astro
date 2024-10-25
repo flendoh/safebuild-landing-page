@@ -1,37 +1,44 @@
 ---
 import Card from './Card.astro';
 ---
-<section class="services-section">
+<section id="servicios">
     <div class="text-container">
         <h1>Nuestros Servicios</h1>
         <p>Soluciones a tu medida</p>
     </div>
     <div class="cards-container">
-        <Card title="Monitoreo en Tiempo Real" description="Supervisa la salud de los trabajadores en tiempo real para prevenir accidentes." image="/IconMonitoreo.svg" />
-        <Card title="Alertas Personalizables" description="Configura alertas según las condiciones específicas de cada proyecto." image="/IconAlerta.svg" />
-        <Card title="Capacitación en Seguridad" description="Accede a recursos de capacitación para mejorar la seguridad en el sitio de trabajo." image="/IconCapacitacion.svg" />
+        <Card title="Monitoreo en Tiempo Real" description="Supervisa la salud de los trabajadores en tiempo real para prevenir accidentes." image="/IconMonitoreo.svg" alt="Icono de monitoreo" />
+        <Card title="Alertas Personalizables" description="Configura alertas según las condiciones específicas de cada proyecto." image="/IconAlerta.svg" alt="Icono de alerta" />
+        <Card title="Capacitación en Seguridad" description="Accede a recursos de capacitación para mejorar la seguridad en el sitio de trabajo." image="/IconCapacitacion.svg" alt="Icono de capacitación" />
     </div>
 </section>
 <style>
-    .services-section {
+#servicios {
         background-color: #e7eff6;
-        height: 770px;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding: 4rem 2rem;
+    }
+    .text-container {
         text-align: center;
+        margin-bottom: 4rem;
+        max-width: 800px;
     }
-    .text-container{
-        margin-bottom: 5rem;
+    .text-container h1 {
+        margin-bottom: 1rem;
     }
-    p{
-        margin-top: 1rem;
-        font-size: 18px;
+    .text-container p {
+        font-size: clamp(18px, 2vw, 22px);
     }
-    .cards-container{
+    .cards-container {
         display: flex;
         justify-content: center;
         gap: 2rem;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
     }
 </style>

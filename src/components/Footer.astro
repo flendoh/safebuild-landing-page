@@ -19,13 +19,18 @@ import ContactSection from './ContactSection.astro';
         display: flex;
         justify-content: start;
         align-items: center;
+        padding: 1rem;
     }
     .sub-footer p {
-        padding: 0 10rem;
         font-size: 14px;
     }
     .line {
         background-color: #f3f8fe;
         height: 50px;
+    }
+    @media (max-width: 768px) {
+        .sub-footer {
+            justify-content: centeryy;
+        }
     }
 </style>
